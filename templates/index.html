@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+
+    <style>
+        body {
+            background-color: #f4ede6;
+            /* Màu nâu nhạt cho nền */
+            color: #4d2d00;
+            /* Màu chữ tối cho tương phản */
+            font-family: Arial, sans-serif;
+            /* Font chữ mặc định */
+            margin: 0;
+            /* Loại bỏ margin mặc định của trình duyệt */
+            padding: 0;
+            /* Loại bỏ padding mặc định của trình duyệt */
+        }
+
+        h1 {
+            color: #7a4b00;
+            /* Màu nâu đậm cho tiêu đề */
+            text-align: center;
+            /* Căn giữa tiêu đề */
+        }
+
+
+        form {
+            max-width: 400px;
+            /* Để form không rộng quá trang */
+            margin: 20px auto;
+            /* Canh giữa form */
+            background-color: #fff;
+            /* Nền trắng cho form */
+            padding: 20px;
+            /* Khoảng cách giữa nội dung form và viền ngoài form */
+            border-radius: 8px;
+            /* Bo tròn góc cho form */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Đổ bóng nhẹ cho form */
+        }
+
+        label {
+            color: #7a4b00;
+            /* Màu nâu đậm cho nhãn */
+            display: block;
+            /* Để các nhãn xuất hiện dưới dạng block để tạo khoảng cách giữa chúng */
+            margin-bottom: 8px;
+            /* Khoảng cách giữa các nhãn */
+        }
+
+        input[type="text"] {
+            width: 100%;
+            /* Độ rộng 100% cho input text */
+            padding: 8px;
+            /* Khoảng cách bên trong input */
+            margin-bottom: 16px;
+            /* Khoảng cách giữa các input */
+            border: 1px solid #7a4b00;
+            /* Viền xung quanh input */
+            border-radius: 4px;
+            /* Bo tròn góc cho input */
+            box-sizing: border-box;
+            /* Đảm bảo rằng padding và border không làm thay đổi kích thước tổng của input */
+        }
+
+        input[type="submit"] {
+            background-color: #7a4b00;
+            /* Màu nâu đậm cho nút submit */
+            color: #fff;
+            /* Màu chữ trắng */
+            padding: 10px 15px;
+            /* Kích thước của nút */
+            border: none;
+            /* Không có viền cho nút */
+            border-radius: 4px;
+            /* Bo tròn góc cho nút */
+            cursor: pointer;
+            /* Hiển thị cursor khi di chuyển qua nút */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5e3a00;
+            /* Màu nâu đậm khi hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Diabetes Prediction</h1>
+    <form action="/result" method="post">
+        <label for="pregnancies">Pregnancies:</label>
+        <input type="text" name="pregnancies" required>
+
+        <label for="glucose">Glucose:</label>
+        <input type="text" name="glucose" required>
+
+        <label for="blood_pressure">Blood Pressure:</label>
+        <input type="text" name="blood_pressure" required>
+
+        <label for="skin_thickness">Skin Thickness:</label>
+        <input type="text" name="skin_thickness" required>
+
+        <label for="insulin">Insulin:</label>
+        <input type="text" name="insulin" required>
+
+        <label for="bmi">BMI:</label>
+        <input type="text" name="bmi" required>
+
+        <label for="diabetes_pedigree_function">Diabetes Pedigree Function:</label>
+        <input type="text" name="diabetes_pedigree_function" required>
+
+        <label for="age">Age:</label>
+        <input type="text" name="age" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+
+</html>
